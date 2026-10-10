@@ -1,0 +1,22 @@
+# ==============================================================================
+# Arch User Repository Packages (AUR)
+# Install via yay / paru
+# ==============================================================================
+
+# Session & Desktop Components
+wlogout
+mpvpaper
+qt6-avif-image-plugin
+
+# Theming, Icons & Cursors
+bibata-cursor-theme
+papirus-folders
+darkly-bin
+breeze-plus
+
+# Required Typographic & Icon Fonts
+otf-space-grotesk
+ttf-readex-pro
+ttf-rubik-vf
+ttf-twemoji
+ttf-material-symbols-variable-git

@@ -1,0 +1,131 @@
+# ==============================================================================
+# Arch Linux Official Repository Packages (pacman)
+# ==============================================================================
+
+# Hyprland Core & Ecosystem
+hyprland
+hypridle
+hyprlock
+hyprpicker
+hyprsunset
+hyprpolkitagent
+
+# Wayland, Portals & XWayland
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+xdg-desktop-portal-kde
+xorg-xwayland
+xdg-user-dirs
+xdg-utils
+
+# Quickshell & Qt6 UI Engine
+quickshell
+qt6-5compat
+qt6-imageformats
+qt6-multimedia
+qt6-positioning
+qt6-quicktimeline
+qt6-sensors
+qt6-svg
+qt6-tools
+qt6-translations
+qt6-virtualkeyboard
+qt6-wayland
+kirigami
+kdialog
+syntax-highlighting
+
+# Launchers, Session & Authentication
+rofi
+fuzzel
+polkit
+polkit-kde-agent
+gnome-keyring
+
+# Wallpaper & Dynamic Colors
+awww
+imagemagick
+matugen
+
+# Screenshot, Recording & Utilities
+grim
+slurp
+swappy
+hyprshot
+wf-recorder
+tesseract
+tesseract-data-eng
+translate-shell
+songrec
+libqalculate
+
+# Audio & Media Controls
+pipewire
+pipewire-audio
+pipewire-pulse
+wireplumber
+pavucontrol
+pavucontrol-qt
+playerctl
+libdbusmenu-gtk3
+
+# Clipboard & Virtual Input
+cliphist
+wl-clipboard
+wtype
+ydotool
+
+# Networking & Bluetooth
+networkmanager
+network-manager-applet
+plasma-nm
+bluez
+bluez-utils
+blueman
+bluedevil
+
+# Hardware, Sensors & Power Management
+brightnessctl
+ddcutil
+geoclue
+upower
+power-profiles-daemon
+
+# Terminal Emulators & Shells
+kitty
+foot
+fish
+zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
+starship
+eza
+
+# CLI Utilities & System Tools
+ripgrep
+jq
+bc
+rsync
+go-yq
+python
+python-pip
+uv
+
+# System Monitors & Visualizers
+btop
+fastfetch
+cava
+
+# File Management & System Settings
+dolphin
+systemsettings
+
+# Theming, GTK & Qt Engines
+nwg-look
+kvantum
+breeze
+adw-gtk-theme
+papirus-icon-theme
+
+# Fonts
+ttf-jetbrains-mono-nerd

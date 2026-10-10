@@ -1,0 +1,19 @@
+# Cache & temporary files
+*.bak
+*.new
+*.tmp
+*~
+*.swp
+*.swo
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local runtime states
+.cache/
+*.log
+
+# OS artifacts
+.DS_Store
+Thumbs.db
