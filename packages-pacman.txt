@@ -129,3 +129,20 @@ papirus-icon-theme
 
 # Fonts
 ttf-jetbrains-mono-nerd
+
+# Automatically synced from dx4white on 2026-10-11
+firefox
+gnome-text-editor
+htop
+hyprpm
+mission-center
+mpv
+nautilus
+neovim
+otf-font-awesome
+pyside6
+python-pillow
+sddm
+seahorse
+speedtest-cli
+waybar

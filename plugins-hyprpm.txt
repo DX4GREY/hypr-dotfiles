@@ -1,0 +1,7 @@
+# ==============================================================================
+# Hyprland Plugins (managed via hyprpm)
+# Install & Enable:
+#   hyprpm add <repository_url>
+#   hyprpm enable <plugin_name>
+# ==============================================================================
+https://github.com/hyprnux/hyprglass hyprglass enabled

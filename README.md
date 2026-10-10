@@ -78,13 +78,21 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### What `install.sh` Does:
-1. **Validates Distro**: Confirms that your system is Arch Linux or Arch-compatible.
-2. **Bootstraps AUR Helper**: Installs `yay` automatically if neither `yay` nor `paru` is present.
-3. **Installs Packages**: Batches all required official (`packages-pacman.txt`) and AUR (`packages-aur.txt`) packages via `yay -S --needed --noconfirm`.
-4. **Automated Backup**: Moves any existing configuration to `~/.config/dots_backup_<timestamp>` before writing new files.
-5. **Deploys Configs & Wallpapers**: Copies all `.config/` directories and deploys default wallpapers to `~/Pictures/Wallpapers/`.
-6. **Configures Services & Cache**: Refreshes font cache (`fc-cache -fv`), applies script permissions (`chmod +x`), and enables PipeWire user services.
+### 🛠️ Intelligent Installer Profiles
+`install.sh` automatically probes your hardware and environment, offering 4 tailored installation profiles:
+
+1. **🌟 Fresh Arch Linux Install** *(Recommended for clean / minimal Arch without a DE)*:
+   - Probes & configures GPU hardware (**NVIDIA** DKMS & Wayland flags, **AMD** Radeon Mesa/Vulkan, **Intel** Media drivers).
+   - Installs & activates **SDDM** with the modern **Astronaut theme** and virtual keyboard.
+   - Enables essential system services (**NetworkManager**, **Bluetooth**, **PipeWire** user audio).
+   - Deploys full dotfiles, wallpapers, shell profiles (**Fish** / **Zsh**), and **hyprpm** plugins.
+2. **🔀 Coexist / Switch DE** *(For systems with existing GNOME, KDE Plasma, XFCE, etc.)*:
+   - Backs up conflicting configs to `~/.config/dots_backup_<timestamp>`.
+   - Safely registers Hyprland as a Wayland session alongside your existing desktop without breaking your current display manager.
+3. **🔧 Repair & Reconfigure**:
+   - Re-deploys configs, fixes executable script permissions, refreshes font cache, recompiles the Material 3 dynamic theme, and rebuilds Hyprland plugins without re-downloading packages.
+4. **⚙️ Custom / Advanced**:
+   - Step-by-step interactive toggles for packages, GPU patches, display manager, plugins, and shell preferences.
 
 ---
 

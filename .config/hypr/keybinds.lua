@@ -20,7 +20,7 @@ hl.bind(mainMod .. " + GRAVE", hl.dsp.exec_cmd("qs ipc call powermenu toggle")) 
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd("qs ipc call settings toggle")) -- Settings
 
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("qs -n -p ~/.config/quickshell/hyprquickpaper")) -- Wallpapers
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(home .. "/qs-wallpaper-picker/scripts/open_picker.sh")) -- Wallpaper Picker
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("/home/dx4white/qs-wallpaper-picker/scripts/open_picker.sh")) -- Wallpaper Picker
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = 0 })) -- Fullscreen
 

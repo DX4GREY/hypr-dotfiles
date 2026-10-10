@@ -114,13 +114,13 @@
                 "placementStrategy": "free",
                 "quote": {
                     "enable": true,
-                    "text": "Arch is better than everything like meens."
+                    "text": "Arch is pure arts like her, smeen!"
                 },
-                "showOnlyWhenLocked": false,
+                "showOnlyWhenLocked": true,
                 "style": "digital",
                 "styleLocked": "digital",
-                "x": 50.80859375,
-                "y": 88.11669499999994
+                "x": 911.8125,
+                "y": 439.46825749999994
             },
             "weather": {
                 "enable": false,
@@ -363,7 +363,7 @@
         "updateInterval": 3000
     },
     "screenRecord": {
-        "savePath": "~/Videos"
+        "savePath": "/home/dx4white/Videos"
     },
     "screenSnip": {
         "savePath": ""
