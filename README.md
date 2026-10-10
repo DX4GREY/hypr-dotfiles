@@ -6,7 +6,7 @@ Inspired by modern fluid design and the architecture of `end-4/hypr-dotfiles`, t
 
 ---
 
-## 📸 Overview & Architecture
+## Overview & Architecture
 
 - **Compositor**: [Hyprland](https://hyprland.org) (v0.56+ with native Lua architecture & modular config split)
 - **Desktop Widgets & Bar**: [Quickshell](https://git.outfoxxed.me/quickshell/quickshell) (`ii` / illogical-impulse widget ecosystem)
@@ -20,7 +20,7 @@ Inspired by modern fluid design and the architecture of `end-4/hypr-dotfiles`, t
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 hypr-dotfiles/
@@ -58,7 +58,7 @@ hypr-dotfiles/
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Option 1: One-Liner (Remote Pipe)
 Run directly from your terminal:
@@ -78,27 +78,27 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### 🛠️ Intelligent Installer Profiles
+### Intelligent Installer Profiles
 `install.sh` automatically probes your hardware and environment, offering 4 tailored installation profiles:
 
-1. **🌟 Fresh Arch Linux Install** *(Recommended for clean / minimal Arch without a DE)*:
+1. **Fresh Arch Linux Install** *(Recommended for clean / minimal Arch without a DE)*:
    - Probes & configures GPU hardware (**NVIDIA** DKMS & Wayland flags, **AMD** Radeon Mesa/Vulkan, **Intel** Media drivers).
    - Installs & activates **SDDM** with the modern **Astronaut theme** and virtual keyboard.
    - Enables essential system services (**NetworkManager**, **Bluetooth**, **PipeWire** user audio).
    - Deploys full dotfiles, wallpapers, shell profiles (**Fish** / **Zsh**), and **hyprpm** plugins.
-2. **🔀 Coexist / Switch DE** *(For systems with existing GNOME, KDE Plasma, XFCE, etc.)*:
+2. **Coexist / Switch DE** *(For systems with existing GNOME, KDE Plasma, XFCE, etc.)*:
    - Backs up conflicting configs to `~/.config/dots_backup_<timestamp>`.
    - Safely registers Hyprland as a Wayland session alongside your existing desktop without breaking your current display manager.
-3. **🔧 Repair & Reconfigure**:
+3. **Repair & Reconfigure**:
    - Re-deploys configs, fixes executable script permissions, refreshes font cache, recompiles the Material 3 dynamic theme, and rebuilds Hyprland plugins without re-downloading packages.
-4. **⚙️ Custom / Advanced**:
+4. **Custom / Advanced**:
    - Step-by-step interactive toggles for packages, GPU patches, display manager, plugins, and shell preferences.
 
 ---
 
-## ⌨️ Keybindings Cheatsheet
+## Keybindings Cheatsheet
 
-### 🚀 Applications & Launchers
+### Applications & Launchers
 | Keybinding | Action |
 | :--- | :--- |
 | `Super + T` | Open default terminal (`kitty` / `foot`) |
@@ -112,7 +112,7 @@ chmod +x install.sh
 | `Super + V` | Open clipboard history manager (`cliphist`) |
 | `Super + .` | Open emoji picker |
 
-### 🪟 Window Navigation & Tiling
+### Window Navigation & Tiling
 | Keybinding | Action |
 | :--- | :--- |
 | `Super + H / J / K / L` | Move focus (Left / Down / Up / Right) |
@@ -123,7 +123,7 @@ chmod +x install.sh
 | `Super + Mouse Left Click` | Drag & move window |
 | `Super + Mouse Right Click`| Drag & resize window |
 
-### 🎨 Desktop Widgets & Theming
+### Desktop Widgets & Theming
 | Keybinding | Action |
 | :--- | :--- |
 | `Super + Tab` | Toggle Quickshell workspaces overview |
@@ -138,7 +138,7 @@ chmod +x install.sh
 | `Ctrl + Super + R` | Restart desktop widgets and shell |
 | `Super + O` | Change window opacity preset |
 
-### 📸 Utilities & Screenshots
+### Utilities & Screenshots
 | Keybinding | Action |
 | :--- | :--- |
 | `Print` | Screenshot entire screen to clipboard |
@@ -150,7 +150,7 @@ chmod +x install.sh
 | `Super + Shift + R` | Record screen area (video) |
 | `Ctrl + Alt + R` | Record fullscreen |
 
-### 🔊 Media & System Controls
+### Media & System Controls
 | Keybinding | Action |
 | :--- | :--- |
 | `XF86AudioRaiseVolume` | Increase volume (+2%) |
@@ -167,7 +167,7 @@ chmod +x install.sh
 
 ---
 
-## ⚙️ Customization & Modular Config
+## Customization & Modular Config
 
 Configurations are cleanly divided into default and user overrides:
 - **Environment variables**: Located in `~/.config/hypr/env.conf`. Sourced automatically by `hyprland.lua`.
@@ -176,5 +176,5 @@ Configurations are cleanly divided into default and user overrides:
 
 ---
 
-## 📜 License
+## License
 Released under the MIT License. Feel free to use, modify, and share!

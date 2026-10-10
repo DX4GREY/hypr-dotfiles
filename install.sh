@@ -169,7 +169,7 @@ trap 'kill "$SUDO_PID" 2>/dev/null || true' EXIT
 step "Analyzing System Architecture & Environment"
 
 # Distribution
-printf "  ${C_CYAN}• Distribution:${C_RESET}    %s\n" "${PRETTY_NAME:-Arch Linux}"
+printf "  ${C_CYAN}-> Distribution:${C_RESET}    %s\n" "${PRETTY_NAME:-Arch Linux}"
 
 # Detect Existing Desktop Environment
 DETECTED_DE="None (Pure TTY / Minimal)"
@@ -184,7 +184,7 @@ elif command -v xfce4-session >/dev/null 2>&1; then
 elif command -v cinnamon >/dev/null 2>&1; then
     DETECTED_DE="Cinnamon"
 fi
-printf "  ${C_CYAN}• Environment:${C_RESET}     %s\n" "$DETECTED_DE"
+printf "  ${C_CYAN}-> Environment:${C_RESET}     %s\n" "$DETECTED_DE"
 
 # Detect Active / Installed Display Manager
 DETECTED_DM="None (Console / TTY)"
@@ -199,7 +199,7 @@ elif systemctl is-enabled --quiet sddm 2>/dev/null; then
 elif systemctl is-enabled --quiet gdm 2>/dev/null; then
     DETECTED_DM="GDM (Installed, Enabled)"
 fi
-printf "  ${C_CYAN}• Display Manager:${C_RESET} %s\n" "$DETECTED_DM"
+printf "  ${C_CYAN}-> Display Manager:${C_RESET} %s\n" "$DETECTED_DM"
 
 # Detect GPU Hardware
 GPU_TYPE="Generic / Integrated"
@@ -224,18 +224,18 @@ elif grep -qi "intel" <<< "$GPU_INFO"; then
     GPU_TYPE="Intel Graphics"
     IS_INTEL=1
 fi
-printf "  ${C_CYAN}• Graphics Card:${C_RESET}   %s\n" "$GPU_TYPE"
+printf "  ${C_CYAN}-> Graphics Card:${C_RESET}   %s\n" "$GPU_TYPE"
 
 # Detect Virtualization
 if command -v systemd-detect-virt >/dev/null 2>&1; then
     VIRT_TYPE="$(systemd-detect-virt 2>/dev/null || echo "none")"
     if [[ "$VIRT_TYPE" != "none" ]]; then
-        printf "  ${C_CYAN}• Virtualization:${C_RESET}  %s (VM detected, 3D acceleration required)\n" "$VIRT_TYPE"
+        printf "  ${C_CYAN}-> Virtualization:${C_RESET}  %s (VM detected, 3D acceleration required)\n" "$VIRT_TYPE"
     fi
 fi
 
 # Detect Current Shell
-printf "  ${C_CYAN}• User Shell:${C_RESET}      %s (%s)\n" "${SHELL}" "$USER"
+printf "  ${C_CYAN}-> User Shell:${C_RESET}      %s (%s)\n" "${SHELL}" "$USER"
 
 # ------------------------------------------------------------------------------
 # 6. Interactive Mode Selection
@@ -244,23 +244,23 @@ if [[ -z "$TARGET_MODE" ]]; then
     printf "\n${C_BOLD}%s${C_RESET}\n" "Select Installation Profile:"
     
     if [[ "$DETECTED_DE" == *"None"* ]]; then
-        printf "  ${C_GREEN}[1] 🌟 Fresh Arch Linux Install${C_RESET} ${C_BOLD}(Recommended for your system)${C_RESET}\n"
+        printf "  ${C_GREEN}[1] Fresh Arch Linux Install${C_RESET} ${C_BOLD}(Recommended for your system)${C_RESET}\n"
         printf "      Full setup: Core packages, AUR helper, GPU drivers, SDDM, audio, & configs.\n"
-        printf "  ${C_YELLOW}[2] 🔀 Coexist / Switch DE${C_RESET}\n"
+        printf "  ${C_YELLOW}[2] Coexist / Switch DE${C_RESET}\n"
         printf "      Install Hyprland alongside existing setups without replacing current DM.\n"
-        printf "  ${C_CYAN}[3] 🔧 Repair & Reconfigure${C_RESET}\n"
+        printf "  ${C_CYAN}[3] Repair & Reconfigure${C_RESET}\n"
         printf "      Fix broken configs, permissions, themes, and hyprpm plugins.\n"
-        printf "  ${C_MAGENTA}[4] ⚙️  Custom / Advanced Install${C_RESET}\n"
+        printf "  ${C_MAGENTA}[4] Custom / Advanced Install${C_RESET}\n"
         printf "      Step-by-step interactive selection for each component.\n"
         DEFAULT_CHOICE="1"
     else
-        printf "  ${C_GREEN}[1] 🌟 Full Clean Install${C_RESET}\n"
+        printf "  ${C_GREEN}[1] Full Clean Install${C_RESET}\n"
         printf "      Complete Hyprland setup including SDDM Astronaut login manager.\n"
-        printf "  ${C_YELLOW}[2] 🔀 Coexist / Switch DE${C_RESET} ${C_BOLD}(Recommended: %s detected)${C_RESET}\n" "$DETECTED_DE"
+        printf "  ${C_YELLOW}[2] Coexist / Switch DE${C_RESET} ${C_BOLD}(Recommended: %s detected)${C_RESET}\n" "$DETECTED_DE"
         printf "      Safely install Hyprland alongside %s (keeps your current login manager).\n" "$DETECTED_DE"
-        printf "  ${C_CYAN}[3] 🔧 Repair & Reconfigure${C_RESET}\n"
+        printf "  ${C_CYAN}[3] Repair & Reconfigure${C_RESET}\n"
         printf "      Refresh dotfiles, theme colors, and plugins without re-downloading packages.\n"
-        printf "  ${C_MAGENTA}[4] ⚙️  Custom / Advanced Install${C_RESET}\n"
+        printf "  ${C_MAGENTA}[4] Custom / Advanced Install${C_RESET}\n"
         printf "      Step-by-step interactive selection for each component.\n"
         DEFAULT_CHOICE="2"
     fi
@@ -690,24 +690,25 @@ fi
 # 16. Installation Summary & Launch Instructions
 # ------------------------------------------------------------------------------
 printf "\n"
-printf "${C_GREEN}%s${C_RESET}\n" "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
-printf "${C_GREEN}┃${C_BOLD}${C_WHITE}        HYPR-DOTFILES INSTALLATION COMPLETED! 🎉            ${C_GREEN}┃${C_RESET}\n"
-printf "${C_GREEN}%s${C_RESET}\n\n" "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛"
+printf "${C_GREEN}%s${C_RESET}\n" "=========================================================="
+printf "${C_BOLD}${C_GREEN}%s${C_RESET}\n" "        HYPR-DOTFILES INSTALLATION COMPLETED              "
+printf "${C_GREEN}%s${C_RESET}\n" "=========================================================="
+printf "\n"
 
-printf "  ${C_CYAN}• Configs:${C_RESET}     %s\n" "$HOME/.config"
-printf "  ${C_CYAN}• Wallpapers:${C_RESET}  %s\n" "$WALLPAPER_DEST"
+printf "  -> Configs:     %s\n" "$HOME/.config"
+printf "  -> Wallpapers:  %s\n" "$WALLPAPER_DEST"
 if [[ "$BACKUP_CREATED" -eq 1 ]]; then
-    printf "  ${C_CYAN}• Backup:${C_RESET}      %s\n" "$BACKUP_DIR"
+    printf "  -> Backup:      %s\n" "$BACKUP_DIR"
 fi
 
 printf "\n${C_BOLD}%s${C_RESET}\n" "How to start Hyprland:"
 if [[ "$SETUP_SDDM" -eq 1 ]]; then
-    printf "  ${C_GREEN}✓${C_RESET} SDDM login manager is enabled. Simply reboot your system:\n"
-    printf "    ${C_CYAN}sudo reboot${C_RESET}\n"
+    printf "  [+] SDDM login manager is enabled. Simply reboot your system:\n"
+    printf "      ${C_CYAN}sudo reboot${C_RESET}\n"
 elif [[ "$TARGET_MODE" == "switch" ]]; then
-    printf "  ${C_GREEN}✓${C_RESET} Log out of your current desktop session, select ${C_BOLD}'Hyprland'${C_RESET} in your login screen.\n"
+    printf "  [+] Log out of your current desktop session, select ${C_BOLD}'Hyprland'${C_RESET} in your login screen.\n"
 else
-    printf "  ${C_GREEN}✓${C_RESET} Launch directly from your current TTY console by typing:\n"
-    printf "    ${C_CYAN}Hyprland${C_RESET}\n"
+    printf "  [+] Launch directly from your current TTY console by typing:\n"
+    printf "      ${C_CYAN}Hyprland${C_RESET}\n"
 fi
 printf "\n"
