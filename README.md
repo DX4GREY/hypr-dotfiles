@@ -4,6 +4,10 @@
 
 Inspired by modern fluid design and the architecture of `end-4/hypr-dotfiles`, this repository bundles a complete, cohesive, and battle-tested Wayland setup into a standalone, reproducible configuration.
 
+<p align="center">
+  <img src="assets/screenshots/preview.png" alt="Desktop Preview" width="100%">
+</p>
+
 ---
 
 ## Overview & Architecture
@@ -17,6 +21,26 @@ Inspired by modern fluid design and the architecture of `end-4/hypr-dotfiles`, t
 - **Shells & Prompts**: [Fish](https://fishshell.com/) & [Zsh](https://www.zsh.org/) + [Starship](https://starship.rs/)
 - **Wallpaper Daemon**: `awww` / `mpvpaper` with integrated wallpaper selector
 - **Audio & Media**: PipeWire + WirePlumber + Playerctl
+
+---
+
+## Screenshots
+
+| Desktop & Status Bar | Control Center & Notifications |
+| :---: | :---: |
+| <img src="assets/screenshots/desktop.png" alt="Desktop Overview" width="100%"> | <img src="assets/screenshots/control-center.png" alt="Control Center" width="100%"> |
+
+| Application Launcher & Workspaces | Terminal & Fastfetch |
+| :---: | :---: |
+| <img src="assets/screenshots/launcher.png" alt="App Launcher" width="100%"> | <img src="assets/screenshots/terminal-fastfetch.png" alt="Terminal" width="100%"> |
+
+| Wallpaper Selector | Keybindings Cheatsheet |
+| :---: | :---: |
+| <img src="assets/screenshots/wallpaper-picker.png" alt="Wallpaper Selector" width="100%"> | <img src="assets/screenshots/cheatsheet.png" alt="Cheatsheet" width="100%"> |
+
+| Session & Power Menu (wlogout) | |
+| :---: | :---: |
+| <img src="assets/screenshots/session-menu.png" alt="Session Menu" width="100%"> | |
 
 ---
 
@@ -49,6 +73,7 @@ hypr-dotfiles/
 │   ├── starship.toml            # Starship cross-shell prompt
 │   └── .zshrc                   # Zsh interactive configuration
 ├── assets/
+│   ├── screenshots/             # Desktop preview & screenshots
 │   └── wallpapers/              # Default high-resolution wallpapers (e.g., hill-house.png)
 ├── packages-pacman.txt          # Official Arch Linux repository dependencies
 ├── packages-aur.txt             # Arch User Repository (AUR) packages
