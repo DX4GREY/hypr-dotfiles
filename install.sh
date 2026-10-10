@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ==============================================================================
-# dots-hyprland Modular Installer
+# hypr-dotfiles Modular Installer
 # Compatible with Arch Linux & Arch-based distributions
 # ==============================================================================
 
@@ -35,8 +35,8 @@ fi
 if [[ -z "$SCRIPT_DIR" || ! -d "${SCRIPT_DIR}/.config" || ! -f "${SCRIPT_DIR}/packages-pacman.txt" ]]; then
     info "Running via one-liner/pipe. Bootstrapping repository to temporary directory..."
     
-    REPO_URL="${DOTS_REPO_URL:-https://github.com/dx4white/dots-hyprland.git}"
-    TEMP_DIR="$(mktemp -d -t dots-hyprland-XXXXXX)"
+    REPO_URL="${DOTS_REPO_URL:-https://github.com/DX4GREY/hypr-dotfiles.git}"
+    TEMP_DIR="$(mktemp -d -t hypr-dotfiles-XXXXXX)"
     
     if ! command -v git >/dev/null 2>&1; then
         info "Installing git..."
@@ -44,9 +44,9 @@ if [[ -z "$SCRIPT_DIR" || ! -d "${SCRIPT_DIR}/.config" || ! -f "${SCRIPT_DIR}/pa
     fi
     
     info "Cloning ${REPO_URL} into ${TEMP_DIR}..."
-    git clone --depth 1 "$REPO_URL" "$TEMP_DIR/dots-hyprland"
+    git clone --depth 1 "$REPO_URL" "$TEMP_DIR/hypr-dotfiles"
     
-    cd "$TEMP_DIR/dots-hyprland"
+    cd "$TEMP_DIR/hypr-dotfiles"
     exec bash install.sh "$@"
 fi
 
@@ -54,7 +54,7 @@ fi
 # 2. Distro & Environment Validation
 # ------------------------------------------------------------------------------
 printf "${C_CYAN}%s${C_RESET}\n" "=========================================================="
-printf "${C_BOLD}%s${C_RESET}\n" "           dots-hyprland Automated Installer             "
+printf "${C_BOLD}%s${C_RESET}\n" "           hypr-dotfiles Automated Installer             "
 printf "${C_CYAN}%s${C_RESET}\n" "=========================================================="
 
 if [[ "${EUID}" -eq 0 ]]; then
@@ -270,7 +270,7 @@ fi
 # ------------------------------------------------------------------------------
 printf "\n"
 printf "${C_GREEN}%s${C_RESET}\n" "=========================================================="
-printf "${C_BOLD}${C_GREEN}%s${C_RESET}\n" "       dots-hyprland Installation Finished Successfully!   "
+printf "${C_BOLD}${C_GREEN}%s${C_RESET}\n" "       hypr-dotfiles Installation Finished Successfully!   "
 printf "${C_GREEN}%s${C_RESET}\n" "=========================================================="
 printf "\n"
 printf "  • Configurations: %s\n" "$HOME/.config"
