@@ -1,8 +1,8 @@
-# dots-hyprland
+# hypr-dotfiles
 
 > **A clean, modular, and dynamic Hyprland desktop environment powered by Quickshell, Hyprlock, Matugen, and Fish/Zsh on Arch Linux.**
 
-Inspired by modern fluid design and the architecture of `end-4/dots-hyprland`, this repository bundles a complete, cohesive, and battle-tested Wayland setup into a standalone, reproducible configuration.
+Inspired by modern fluid design and the architecture of `end-4/hypr-dotfiles`, this repository bundles a complete, cohesive, and battle-tested Wayland setup into a standalone, reproducible configuration.
 
 ---
 
@@ -23,7 +23,7 @@ Inspired by modern fluid design and the architecture of `end-4/dots-hyprland`, t
 ## 📂 Repository Structure
 
 ```text
-dots-hyprland/
+hypr-dotfiles/
 ├── .config/
 │   ├── hypr/                    # Hyprland Lua configuration, hyprlock, hypridle, env.conf
 │   ├── quickshell/              # Quickshell widgets, bar, control center, notifications
@@ -63,15 +63,15 @@ dots-hyprland/
 ### Option 1: One-Liner (Remote Pipe)
 Run directly from your terminal:
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/dx4white/dots-hyprland/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/DX4GREY/hypr-dotfiles/main/install.sh)
 ```
 *(The installer automatically detects that it is running via a pipe, clones the repository to `/tmp`, and executes the setup).*
 
 ### Option 2: Local Clone
 ```bash
 # 1. Clone the repository
-git clone https://github.com/dx4white/dots-hyprland.git
-cd dots-hyprland
+git clone https://github.com/DX4GREY/hypr-dotfiles.git
+cd hypr-dotfiles
 
 # 2. Make installer executable & run
 chmod +x install.sh
