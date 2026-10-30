@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Quickshell LyricBar
+Comment=Floating synchronized Liquid Glass lyric bar for Quickshell
+Exec=/home/dx4white/.local/bin/quickshell-lyricbar --background
+Terminal=false
+Categories=AudioVideo;Audio;
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

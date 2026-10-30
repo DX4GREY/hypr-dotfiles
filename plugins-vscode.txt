@@ -2,12 +2,17 @@
 # Visual Studio Code Extensions
 # Install via: code --install-extension <extension_id>
 # ==============================================================================
+bbenoist.qml
+bierner.github-markdown-preview
+bierner.markdown-checkbox
+bierner.markdown-emoji
+bierner.markdown-footnotes
 bierner.markdown-preview-github-styles
 github.codespaces
-github.github-vscode-theme
 github.remotehub
 github.vscode-github-actions
 github.vscode-pull-request-github
+google.google-antigravity
 illixion.vscode-vibrancy-continued
 ms-azuretools.vscode-azureresourcegroups
 ms-python.debugpy

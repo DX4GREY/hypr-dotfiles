@@ -292,6 +292,60 @@ Singleton {
                 property int suspend: 3
             }
 
+            property JsonObject power: JsonObject {
+                property string profile: "balanced"
+                property int lockTimeout: 5
+                property int sleepTimeout: 10
+                property int suspendTimeout: 15
+                property bool enableLock: true
+                property bool enableSleep: true
+                property bool enableSuspend: true
+                property bool enableDim: true
+                property int dimBeforeSleepSeconds: 30
+                property bool autoSwitchProfile: true
+                property string profileOnAc: "balanced"
+                property string profileOnBattery: "power-saver"
+                property int chargeLimit: 80
+            }
+
+            property JsonObject mouse: JsonObject {
+                property real sensitivity: 0.0
+                property int sensitivityPercent: 0
+                property string accelProfile: "flat"
+                property bool naturalScroll: false
+                property bool leftHanded: false
+                property bool middleEmulation: false
+                property real scrollFactor: 1.0
+                property int scrollFactorPercent: 100
+
+                property bool touchpadEnabled: true
+                property real touchpadSensitivity: 0.0
+                property int touchpadSensitivityPercent: 0
+                property bool touchpadNaturalScroll: true
+                property bool tapToClick: true
+                property bool tapAndDrag: true
+                property bool dragLock: false
+                property bool disableWhileTyping: true
+                property bool clickfingerBehavior: true
+                property real touchpadScrollFactor: 0.7
+                property int touchpadScrollFactorPercent: 70
+
+                property int cursorSize: 24
+                property string cursorTheme: "Bibata-Modern-Classic"
+                property int inactiveTimeout: 0
+                property int followMouse: 1
+                property bool mouseMoveEnablesDpms: true
+                property bool autoDisableTouchpad: false
+                property bool touchpadMiddleEmulation: false
+                property string tapButtonMap: "lrm"
+                property bool noWarps: false
+                property bool hideOnKeyPress: false
+                property real zoomFactor: 1.0
+                property bool mouseRefocus: true
+                property bool workspaceSwipeInvert: true
+                property int workspaceSwipeDistance: 700
+            }
+
             property JsonObject calendar: JsonObject {
                 property string locale: "en-GB"
             }

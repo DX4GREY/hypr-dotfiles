@@ -1,0 +1,22 @@
+{
+  "autoHideOnStop": true,
+  "anchorTop": false,
+  "horizontalAlign": "left",
+  "offsetY": 28,
+  "marginSide": 32,
+  "showProgressBar": false,
+  "showArtistBadge": false,
+  "showPlayButton": true,
+  "showPulseDot": false,
+  "enableParallax": false,
+  "fontSizeDelta": 0,
+  "bindToggle": "SUPER + Y",
+  "bindToggleMini": "SUPER + ALT + Y",
+  "bindToggleSettings": "SUPER + CTRL + Y",
+  "demoMode": false,
+  "animationsEnabled": true,
+  "animEasingPreset": "smooth",
+  "animDurationPos": 420,
+  "animDurationLyric": 280,
+  "animOvershoot": 1.12
+}

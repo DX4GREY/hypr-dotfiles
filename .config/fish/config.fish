@@ -2,7 +2,7 @@
 if status is-interactive
     # No greeting
     set fish_greeting
-
+fastfetch
     # Use starship
     function starship_transient_prompt_func
         starship module character

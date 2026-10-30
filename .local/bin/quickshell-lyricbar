@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+export PATH="${HOME}/.local/bin:/usr/local/bin:/usr/bin:/bin:${PATH}"
+if [[ "${1:-}" == "ipc" ]]; then
+    shift
+    exec qs -c lyricbar ipc --any-display "$@"
+fi
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/quickshell/lyricbar"
+if [[ -f "${CONFIG_DIR}/run.sh" ]]; then
+    exec "${CONFIG_DIR}/run.sh" "$@"
+else
+    exec qs -c lyricbar "$@"
+fi

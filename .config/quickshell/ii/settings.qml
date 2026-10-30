@@ -34,6 +34,16 @@ ApplicationWindow {
             component: "modules/settings/GeneralConfig.qml"
         },
         {
+            name: Translation.tr("Power"),
+            icon: "battery_charging_full",
+            component: "modules/settings/PowerConfig.qml"
+        },
+        {
+            name: Translation.tr("Mouse & Touchpad"),
+            icon: "mouse",
+            component: "modules/settings/MouseConfig.qml"
+        },
+        {
             name: Translation.tr("Bar"),
             icon: "toast",
             iconRotation: 180,

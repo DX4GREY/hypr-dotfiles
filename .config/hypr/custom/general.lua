@@ -36,6 +36,7 @@ if hl.plugin.hyprglass then
     hg.layer("quickshell:osk", { preset = "pomme", mask_threshold = 0.01 })
     hg.layer("quickshell:polkit", { preset = "pomme", mask_threshold = 0.01 })
     hg.layer("quickshell:reloadPopup", { preset = "pomme", mask_threshold = 0.01 })
+    hg.layer("quickshell:lyricbar", { preset = "pomme", mask_threshold = 0.01, mask_feather = 0.45 })
 
     -- Exclude wallpaper and non-glass overlays
     hg.layer("quickshell:background", { exclude = true })
@@ -48,4 +49,10 @@ if hl.plugin.hyprglass then
     hg.layer("fuzzel", { preset = "pomme", mask_threshold = 0.01, mask_feather = 0.45 })
     hg.layer("wlogout", { preset = "pomme", mask_threshold = 0.01 })
     hg.layer("swaync", { preset = "pomme", mask_threshold = 0.01 })
+end
+
+
+-- Include Mouse & Pointer Customizations
+if is_file_exists(HOME .. "/.config/hypr/custom/mouse.lua") then
+    require("custom.mouse")
 end

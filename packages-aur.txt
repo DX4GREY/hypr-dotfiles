@@ -48,3 +48,9 @@ sptlrx-bin
 visual-studio-code-bin
 waybar-lyric
 yay-bin
+auto-cpufreq
+telegram-desktop-bin
+zoom
+
+# Automatically synced from dx4white on 2026-10-30
+shim-signed

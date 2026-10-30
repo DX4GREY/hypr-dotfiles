@@ -98,11 +98,35 @@ Singleton {
     }
 
     onIsPluggedInChanged: {
-        if (!root.available || !root.soundEnabled) return;
-        if (isPluggedIn) {
-            Audio.playSystemSound("power-plug")
-        } else {
-            Audio.playSystemSound("power-unplug")
+        if (!root.available) return;
+        if (root.soundEnabled) {
+            if (isPluggedIn) {
+                Audio.playSystemSound("power-plug");
+            } else {
+                Audio.playSystemSound("power-unplug");
+            }
+        }
+
+        // Auto profile switching
+        if (Config.options.power && Config.options.power.autoSwitchProfile) {
+            const targetProfile = isPluggedIn 
+                ? (Config.options.power.profileOnAc || "balanced")
+                : (Config.options.power.profileOnBattery || "power-saver");
+            
+            Quickshell.execDetached([
+                "python3",
+                Directories.powerManagerScript,
+                "set-profile",
+                targetProfile
+            ]);
+
+            Quickshell.execDetached([
+                "notify-send",
+                Translation.tr("Power Profile"),
+                (isPluggedIn ? Translation.tr("Charger connected. Switched to %1 mode.") : Translation.tr("On battery. Switched to %1 mode.")).arg(targetProfile),
+                "-a", "Power",
+                "--hint=int:transient:1"
+            ]);
         }
     }
 }

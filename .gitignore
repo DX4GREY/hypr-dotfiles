@@ -19,6 +19,3 @@ installed_true
 # OS artifacts
 .DS_Store
 Thumbs.db
-
-# User maintenance / sync script
-sync-dotfiles.sh
