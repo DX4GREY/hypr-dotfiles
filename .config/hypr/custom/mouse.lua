@@ -6,7 +6,7 @@ hl.config({
         natural_scroll = false,
         left_handed = false,
         scroll_factor = 1.0,
-        follow_mouse = 0,
+        follow_mouse = 1,
         mouse_refocus = true,
         touchpad = {
             natural_scroll = true,
@@ -25,7 +25,7 @@ hl.config({
         workspace_swipe_cancel_ratio = 0.2
     },
     cursor = {
-        inactive_timeout = 0,
+        inactive_timeout = 20,
         no_warps = false,
         hide_on_key_press = false,
         zoom_factor = 1.0
@@ -37,6 +37,6 @@ hl.config({
 
 hl.device({
     name = "elan1203:00-04f3:307a-touchpad",
-    enabled = false,
+    enabled = true,
     sensitivity = 0.0
 })

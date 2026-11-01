@@ -298,7 +298,7 @@ def apply_and_save(settings):
         "        workspace_swipe_cancel_ratio = 0.2",
         "    },",
         "    cursor = {",
-        f"        inactive_timeout = {int(settings.get('inactiveTimeout', 0))},",
+        f"        inactive_timeout = {min(20, max(0, int(settings.get('inactiveTimeout', 0))))},",
         f"        no_warps = {'true' if settings.get('noWarps', False) else 'false'},",
         f"        hide_on_key_press = {'true' if settings.get('hideOnKeyPress', False) else 'false'},",
         f"        zoom_factor = {float(settings.get('zoomFactor', 1.0))}",

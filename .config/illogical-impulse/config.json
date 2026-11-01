@@ -14,7 +14,7 @@
                 "requires_key": true
             }
         ],
-        "systemPrompt": "## Style\n- Use casual tone, don't be formal!\n- Always be brief and to the point, unless asked otherwise\n- Don't repeat the user's question\n- Be approachable: Avoid using overly complicated, domain-specific terms and provide analogies when asked to explain a concept\n\n## Context (ignore when irrelevant)\n- You are a helpful and inspiring sidebar assistant on a {DISTRO} Linux system\n- Desktop environment: {DE}\n- Current date & time: {DATETIME}\n- Focused app: {WINDOWCLASS}\n\n## Presentation\n- Use Markdown features in your response: \n  - **Bold** text to **highlight keywords** in your response\n  - **Split long information into small sections** with h2 headers and a relevant emoji at the start of it (for example `## \ud83d\udc27 Linux`). Bullet points are preferred over long paragraphs, unless you're offering writing support or instructed otherwise by the user.\n- Asked to compare different options? You should firstly use a table to compare the main aspects, then elaborate or include relevant comments from online forums *after* the table. Make sure to provide a final recommendation for the user's use case!\n- Use LaTeX formatting for mathematical and scientific notations whenever appropriate. Enclose all LaTeX '$$' delimiters. NEVER generate LaTeX code in a latex block unless the user explicitly asks for it. DO NOT use LaTeX for regular documents (resumes, letters, essays, CVs, etc.).\n\nThanks!\n",
+        "systemPrompt": "## Style\n- Use casual tone, don't be formal!\n- Always be brief and to the point, unless asked otherwise\n- Don't repeat the user's question\n- Be approachable: Avoid using overly complicated, domain-specific terms and provide analogies when asked to explain a concept\n\n## Context (ignore when irrelevant)\n- You are a helpful and inspiring sidebar assistant on a {DISTRO} Linux system\n- Desktop environment: {DE}\n- Current date & time: {DATETIME}\n- Focused app: {WINDOWCLASS}\n\n## Presentation\n- Use Markdown features in your response: \n  - **Bold** text to **highlight keywords** in your response\n  - **Split long information into small sections** with h2 headers and a relevant emoji at the start of it (for example `## 🐧 Linux`). Bullet points are preferred over long paragraphs, unless you're offering writing support or instructed otherwise by the user.\n- Asked to compare different options? You should firstly use a table to compare the main aspects, then elaborate or include relevant comments from online forums *after* the table. Make sure to provide a final recommendation for the user's use case!\n- Use LaTeX formatting for mathematical and scientific notations whenever appropriate. Enclose all LaTeX '$$' delimiters. NEVER generate LaTeX code in a latex block unless the user explicitly asks for it. DO NOT use LaTeX for regular documents (resumes, letters, essays, CVs, etc.).\n\nThanks!\n",
         "tool": "functions"
     },
     "appearance": {
@@ -156,7 +156,8 @@
             "memoryWarningThreshold": 95,
             "swapWarningThreshold": 85
         },
-        "screenList": [],
+        "screenList": [
+        ],
         "showBackground": true,
         "tooltips": {
             "clickToShow": true
@@ -183,7 +184,8 @@
         "workspaces": {
             "alwaysShowNumbers": false,
             "monochromeIcons": true,
-            "numberMap": [],
+            "numberMap": [
+            ],
             "showAppIcons": true,
             "showNumberDelay": 300,
             "shown": 10,
@@ -206,7 +208,7 @@
             "key": 12
         },
         "splitButtons": false,
-        "superKey": "\ue711",
+        "superKey": "",
         "useFnSymbol": false,
         "useMacSymbol": false,
         "useMouseSymbol": false
@@ -223,7 +225,8 @@
         "height": 60,
         "hoverRegionHeight": 2,
         "hoverToReveal": true,
-        "ignoredAppRegexes": [],
+        "ignoredAppRegexes": [
+        ],
         "monochromeIcons": true,
         "pinnedApps": [
             "org.kde.dolphin",
@@ -291,88 +294,39 @@
         "filterDuplicatePlayers": true
     },
     "mouse": {
-        "sensitivity": -0.05,
-        "sensitivityPercent": -5,
         "accelProfile": "adaptive",
-        "naturalScroll": false,
-        "leftHanded": false,
-        "middleEmulation": false,
-        "scrollFactor": 1,
-        "scrollFactorPercent": 100,
-        "touchpadEnabled": true,
-        "autoDisableTouchpad": true,
-        "touchpadAutoDisabled": true,
-        "hasExternalMouse": true,
-        "touchpadSensitivity": 0,
-        "touchpadSensitivityPercent": 0,
-        "touchpadNaturalScroll": true,
-        "tapToClick": true,
-        "tapAndDrag": true,
-        "dragLock": false,
-        "disableWhileTyping": true,
+        "autoDisableTouchpad": false,
         "clickfingerBehavior": true,
-        "touchpadScrollFactor": 0.7,
-        "touchpadScrollFactorPercent": 70,
-        "touchpadMiddleEmulation": false,
-        "tapButtonMap": "lrm",
         "cursorSize": 20,
         "cursorTheme": "Bibata-Modern-Classic",
-        "inactiveTimeout": 0,
-        "followMouse": 0,
-        "mouseMoveEnablesDpms": true,
-        "noWarps": false,
+        "disableWhileTyping": true,
+        "dragLock": false,
+        "followMouse": 1,
         "hideOnKeyPress": false,
-        "zoomFactor": 1,
+        "inactiveTimeout": 20,
+        "leftHanded": false,
+        "middleEmulation": false,
+        "mouseMoveEnablesDpms": true,
         "mouseRefocus": true,
-        "workspaceSwipeInvert": true,
+        "naturalScroll": false,
+        "noWarps": false,
+        "scrollFactor": 1,
+        "scrollFactorPercent": 100,
+        "sensitivity": -0.05,
+        "sensitivityPercent": -5,
+        "tapAndDrag": true,
+        "tapButtonMap": "lrm",
+        "tapToClick": true,
+        "touchpadEnabled": true,
+        "touchpadMiddleEmulation": false,
+        "touchpadNaturalScroll": true,
+        "touchpadScrollFactor": 0.7,
+        "touchpadScrollFactorPercent": 70,
+        "touchpadSensitivity": 0,
+        "touchpadSensitivityPercent": 0,
         "workspaceSwipeDistance": 700,
-        "connectedDevices": [
-            {
-                "name": "bycx-gaming-keyboard--mouse",
-                "displayName": "BYCX Keyboard Pointer Trackpoint",
-                "type": "mouse",
-                "isExternal": false,
-                "address": "0x55da03cb38f0",
-                "defaultSpeed": 0.0,
-                "scrollFactor": -1.0
-            },
-            {
-                "name": "g3-2.4g-1",
-                "displayName": "G3 Wireless Optical Gaming Mouse",
-                "type": "mouse",
-                "isExternal": true,
-                "address": "0x55da03d79750",
-                "defaultSpeed": 0.0,
-                "scrollFactor": -1.0
-            },
-            {
-                "name": "elan1203:00-04f3:307a-mouse",
-                "displayName": "ELAN Precision Pointer",
-                "type": "mouse",
-                "isExternal": true,
-                "address": "0x55da03e78a20",
-                "defaultSpeed": 0.0,
-                "scrollFactor": -1.0
-            },
-            {
-                "name": "elan1203:00-04f3:307a-touchpad",
-                "displayName": "ASUS Precision Touchpad (ELAN1203:00)",
-                "type": "touchpad",
-                "isExternal": false,
-                "address": "0x55da03e95560",
-                "defaultSpeed": 0.0,
-                "scrollFactor": -1.0
-            }
-        ],
-        "perDevice": {},
-        "availableCursorThemes": [
-            "Bibata-Modern-Classic",
-            "breeze_cursors",
-            "Breeze_Light",
-            "Adwaita"
-        ],
-        "hardwareTuningAvailable": false,
-        "hardwareDevices": []
+        "workspaceSwipeInvert": true,
+        "zoomFactor": 1
     },
     "musicRecognition": {
         "interval": 4,
@@ -425,9 +379,9 @@
         "enableDim": false,
         "enableLock": false,
         "enableSleep": false,
-        "enableSuspend": true,
+        "enableSuspend": false,
         "lockTimeout": 5,
-        "profile": "power-saver",
+        "profile": "performance",
         "profileOnAc": "performance",
         "profileOnBattery": "balanced",
         "sleepTimeout": 10,
