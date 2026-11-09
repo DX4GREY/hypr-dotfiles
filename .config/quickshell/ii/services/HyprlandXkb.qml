@@ -81,12 +81,16 @@ Singleton {
         stdout: StdioCollector {
             id: devicesCollector
             onStreamFinished: {
-                const parsedOutput = JSON.parse(devicesCollector.text);
-                const hyprlandKeyboard = parsedOutput["keyboards"].find(kb => kb.main === true);
-                root.layoutCodes = hyprlandKeyboard["layout"].split(",");
-                root.currentLayoutName = hyprlandKeyboard["active_keymap"];
-                // console.log("[HyprlandXkb] Fetched | Layouts (multiple: " + (root.layoutCodes.length > 1) + "): "
-                //     + root.layoutCodes.join(", ") + " | Active: " + root.currentLayoutName);
+                try {
+                    const parsedOutput = JSON.parse(devicesCollector.text);
+                    const hyprlandKeyboard = parsedOutput["keyboards"]?.find(kb => kb.main === true);
+                    if (hyprlandKeyboard) {
+                        root.layoutCodes = (hyprlandKeyboard["layout"] || "").split(",");
+                        root.currentLayoutName = hyprlandKeyboard["active_keymap"] || "";
+                    }
+                } catch (e) {
+                    // Ignore non-json or unready socket output
+                }
             }
         }
     }
